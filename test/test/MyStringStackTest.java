@@ -15,9 +15,7 @@ import stack.MyStringStack;
 
 public class MyStringStackTest extends TestCase {
 	private String s1, s2;
-	MyStringStack stack = new MyStringStack();
-	stack.push (s1);
-	assertTrue (stack.isEmpty());
+
 	
 	public MyStringStackTest(String name) {
 		super(name);
@@ -40,7 +38,9 @@ public class MyStringStackTest extends TestCase {
         assertTrue (stack.isEmpty());
 		stack.push (s1);
         stack.push (s2);
-        assertFalse (stack.isEmpty());
+		assertFalse (stack.isEmpty());
+		stack.push (s1);
+		assertTrue (stack.isEmpty());
 	}
 
 	@Test
